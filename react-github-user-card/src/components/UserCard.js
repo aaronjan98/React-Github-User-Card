@@ -5,9 +5,9 @@ const UserCard = props => {
     return (
         <div className="UserInfo">
           <img  src={props.users.avatar_url} />
-          {props.users.login}
-          {console.log(Object.entries(props.users))}
-        
+          <p>Username: {props.users.login}</p>
+          <p>ID: {props.users.id}</p>
+          {console.log(Object.entries(props.users)[0])}
         </div>
     );
 }
