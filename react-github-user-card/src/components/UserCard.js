@@ -1,13 +1,20 @@
 import React from 'react';
+import { Card, CardBody, CardTitle, CardText, CardImg, Row, Col } from 'reactstrap';
 
 const UserCard = props => {
 
     return (
         <div className="UserInfo">
-          <img  src={props.users.avatar_url} />
-          <p>Username: {props.users.login}</p>
-          <p>ID: {props.users.id}</p>
-          {console.log(Object.entries(props.users)[0])}
+          <Card style={{ maxWidth: "500px", margin: "30px"}}>
+              <CardImg top width="100%" src={props.users.avatar_url} alt="Card image cap" />
+              <CardBody>
+                  <CardTitle>Username: {props.users.login}</CardTitle>
+                  <CardText>ID: {props.users.id}</CardText>
+                  <CardText>
+                      <small className="text-muted">type: {props.users.type}</small>
+                  </CardText>
+              </CardBody>
+          </Card>
         </div>
     );
 }
