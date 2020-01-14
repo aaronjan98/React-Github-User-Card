@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import UserCard from './components/UserCard';
 import axios from 'axios';
 import './App.css';
 
@@ -26,12 +27,7 @@ class App extends Component {
       <div className="App">
         <h1>Hello!</h1>
 
-        <div className="UserInfo">
-          <img  src={this.state.users.avatar_url} />
-          {this.state.users.login}
-          {console.log(Object.entries(this.state.users))}
-
-        </div>
+        <UserCard users={this.state.users}/>
       </div>
     );
   }
