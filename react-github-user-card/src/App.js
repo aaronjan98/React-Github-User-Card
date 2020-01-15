@@ -15,6 +15,10 @@ class App extends Component {
       .get('https://api.github.com/users/aaronjan98')
       .then(res => {
         console.log('User Info:', res.data);
+        console.log(Object.keys(res.data))
+        Object.keys(res.data).forEach(item => {
+            console.log(`${item}: ${res.data[item]}`);
+        })
         this.setState({
           users: res.data
         });
