@@ -38,9 +38,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1>React GitHub Users' Cards</h1>
-
-        <UserCard users={this.state.users}/>
-        <Followers followers={this.state.followers}/>
+        <div className="cards">
+          <UserCard users={this.state.users}/>
+          <Followers followers={this.state.followers}/>
+        </div>
       </div>
     );
   }
